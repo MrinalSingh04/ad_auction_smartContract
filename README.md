@@ -9,9 +9,13 @@ The **Decentralized Ad Auction Smart Contract** allows advertisers to bid in **E
 ## 🛠️ Features
 
 ✅ **On-Chain Ad Auction** – Highest bidder wins the ad slot.
+
 ✅ **Time-Based Ownership** – Ads expire after a set duration (default: 24 hours).
+
 ✅ **Refund System** – When a new bidder outbids the current advertiser, the previous bidder gets refunded.
+
 ✅ **Multiple Ad Slots** – Supports multiple ad slots, each managed separately.
+
 ✅ **Admin Withdrawals** – The contract owner can withdraw collected ETH.
 
 ---
@@ -19,9 +23,13 @@ The **Decentralized Ad Auction Smart Contract** allows advertisers to bid in **E
 ## ⚙️ How It Works
 
 1️⃣ **Advertisers Bid** – Calls `bidForAd(slotId, adContent)` with ETH to place a bid.
+
 2️⃣ **If Outbid** – The previous highest bidder is refunded their ETH.
+
 3️⃣ **Ad Remains Active** – The winning ad stays live for the defined duration (`auctionDuration`).
+
 4️⃣ **Ad Expiry** – When time expires, `expireAd(slotId)` can be called to reset the slot.
+
 5️⃣ **Owner Withdraws** – The contract owner can withdraw collected ETH via `withdraw()`.
 
 ---
